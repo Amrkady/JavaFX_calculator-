@@ -56,9 +56,9 @@ public class Calc extends Application{
 		 Button minus =new Button("-");
 		 Button mul =new Button("*");
 		 Button div =new Button("/");
-		 Button sqrt = new Button("√");
-                  sqrt.setScaleX(1.3);
-                  sqrt.setScaleY(1.3);
+		 Button sqrt = new Button("√ ");
+                 // sqrt.setScaleX(1.3);
+                  //sqrt.setScaleY(1.3);
 		 Button mod =new Button("%");
 		 Button dot =new Button(".");
 		 Button square =new Button("x^2");
@@ -79,12 +79,13 @@ public class Calc extends Application{
 		 hbox3.setSpacing(2);
 		 hbox3.getChildren().addAll(seven,eight,nine,open,close);
 		 HBox hbox4=new HBox();
+                 hbox4.getChildren().addAll(zero,dot,mod,plus,minus);
 		 hbox4.setSpacing(2);
 		 HBox hbox5=new HBox();
 		 hbox5.setSpacing(2);
-		 hbox4.getChildren().addAll(zero,dot,mod,plus,minus);
+		 
 		
-		hbox5.getChildren().addAll(square,sqrt,equal);
+		hbox5.getChildren().addAll(sqrt,square,equal);
 		 one.prefWidthProperty().bind(hhbox1.widthProperty().divide(5));
 		 one.prefHeightProperty().bind(hhbox1.heightProperty());
 		two.prefWidthProperty().bind(hhbox1.widthProperty().divide(5));
@@ -125,10 +126,10 @@ public class Calc extends Application{
 		 clear.prefHeightProperty().bind(hhbox1.heightProperty());
 		reset.prefWidthProperty().bind(hhbox1.widthProperty().divide(5));
 		 reset.prefHeightProperty().bind(hhbox1.heightProperty());
-		square.prefWidthProperty().bind(hbox5.widthProperty().divide(5));
+		square.prefWidthProperty().bind(hbox5.widthProperty().divide(6));
 		 square.prefHeightProperty().bind(hbox5.heightProperty());
-		// sqrt.prefWidthProperty().bind(hbox5.widthProperty().divide(5));
-		// sqrt.prefHeightProperty().bind(hbox5.heightProperty());
+		 sqrt.prefWidthProperty().bind(hbox5.widthProperty().divide(5));
+		 sqrt.prefHeightProperty().bind(hbox5.heightProperty());
 			equal.prefHeightProperty().bind(hbox5.heightProperty());
 			
 			equal.prefWidthProperty().bind(hbox5.widthProperty().divide(5).multiply(3));
